@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- Copy the markdown guides next to the .exe so the app can find them
+       no matter which folder you start it from. -->
+  <ItemGroup>
+    <None Include="docs\*.md" CopyToOutputDirectory="PreserveNewest" LinkBase="docs" />
+  </ItemGroup>
+
+</Project>
